@@ -67,6 +67,6 @@ jobs:
           env_vars: |
             NODE_ENV=production
           flags: "--port=8080"
-          region: "europe-west1 (Belgium)"
+          region: "europe-west1"
       - name: "deploy output"
         run: 'curl "${{ steps.deploy.outputs.url }}"'
