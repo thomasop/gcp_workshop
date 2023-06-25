@@ -12,6 +12,6 @@ API.get("/", (req: Request, res: Response) => {
 
 export const server = API.listen(8080, () => {
   console.log("server started on port 8080");
-});
+})
 
 export default API;
