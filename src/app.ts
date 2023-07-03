@@ -18,7 +18,7 @@ const io = new Server(server, {
     origin: "https://chat-front-eta.vercel.app",
     methods: ["GET", "POST"],
   },
-});
+})
 let users: any = {};
 io.on("connection", (socket) => {
   console.log("user connection");
