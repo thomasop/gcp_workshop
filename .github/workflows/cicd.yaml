@@ -66,6 +66,10 @@ jobs:
           image: "${{ secrets.GAR_REPO }}/devops-workshop-api:${{ github.sha }}"
           env_vars: |
             NODE_ENV=production
+            SECRET_TOKEN=${{ secrets.SECRET_TOKEN}}
+            SECRET_COOKIE=${{ secrets.SECRET_COOKIE}}
+            DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD}}
+            PORT=${{ secrets.PORT}}
           flags: "--port=8080"
           region: "europe-west1"
       - name: "deploy output"
