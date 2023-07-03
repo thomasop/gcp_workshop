@@ -47,7 +47,7 @@ io.on("connection", (socket) => {
 });
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors({ credentials: true, origin: "*" }));
+app.use(cors({ credentials: true, origin: true }));
 app.use(cookieParser(process.env.SECRET_COOKIE));
 
 app.use("/user", userRouter);
