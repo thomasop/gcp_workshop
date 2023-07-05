@@ -15,7 +15,7 @@ export const server = createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://friendly-hotteok-1d03d3.netlify.app/",
+    origin: "https://friendly-hotteok-1d03d3.netlify.app",
     methods: ["GET", "POST"],
   },
 })
@@ -47,7 +47,7 @@ io.on("connection", (socket) => {
 });
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors({ credentials: true, origin: "https://friendly-hotteok-1d03d3.netlify.app/" }));
+app.use(cors({ credentials: true, origin: "https://friendly-hotteok-1d03d3.netlify.app" }));
 app.use(cookieParser(process.env.SECRET_COOKIE));
 
 app.use("/user", userRouter);
