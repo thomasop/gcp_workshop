@@ -46,6 +46,7 @@ const Login = async (req: Request, res: Response) => {
           lastname: user.dataValues.lastname,
           mail: user.dataValues.mail,
         };
+        console.log('test kjdslkfjksldfj sdflkjsdlf')
         var expiryDate = new Date();
         expiryDate.setFullYear(expiryDate.getFullYear() + 1);
         res.cookie("userId", user.dataValues.id, {
