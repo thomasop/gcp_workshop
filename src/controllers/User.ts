@@ -52,13 +52,11 @@ const Login = async (req: Request, res: Response) => {
           expires: expiryDate,
           secure: false,
           httpOnly: false,
-          path: "/",
         });
         res.cookie("token", accessToken, {
           expires: expiryDate,
           secure: false,
           httpOnly: false,
-          path: "/",
         });
         return res.status(200).json({
           user: userLogin,
