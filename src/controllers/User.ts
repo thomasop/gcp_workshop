@@ -52,11 +52,15 @@ const Login = async (req: Request, res: Response) => {
           expires: expiryDate,
           secure: false,
           httpOnly: false,
+          path: "/",
+          domain: "https://friendly-hotteok-1d03d3.netlify.app"
         });
         res.cookie("token", accessToken, {
           expires: expiryDate,
           secure: false,
           httpOnly: false,
+          path: "/",
+          domain: "https://friendly-hotteok-1d03d3.netlify.app"
         });
         return res.status(200).json({
           user: userLogin,
